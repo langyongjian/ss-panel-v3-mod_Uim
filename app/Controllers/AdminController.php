@@ -8,6 +8,8 @@ use App\Models\TrafficLog;
 use App\Models\Payback;
 use App\Models\Coupon;
 use App\Models\User;
+use App\Services\Gateway\ChenPay;
+use App\Utils\AliPay;
 use App\Utils\Tools;
 use App\Services\Analytics;
 
@@ -31,6 +33,17 @@ class AdminController extends UserController
         return $this->view()->assign('nodes', $nodes)->display('admin/node.tpl');
     }
 
+
+    public function editConfig($request, $response, $args)
+    {
+        return (new ChenPay())->editConfig();
+    }
+
+    public function saveConfig($request, $response, $args)
+    {
+        return (new ChenPay())->saveConfig($request);
+    }
+
     public function sys()
     {
         return $this->view()->display('admin/index.tpl');
@@ -50,7 +63,7 @@ class AdminController extends UserController
         $table_config['ajax_url'] = 'payback/ajax';
         return $this->view()->assign('table_config', $table_config)->display('admin/invite.tpl');
     }
-
+	
     public function addInvite($request, $response, $args)
     {
         $num = $request->getParam('num');

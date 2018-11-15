@@ -20,6 +20,7 @@ class Config
     {
         return [
             "appName" => self::get("appName"),
+            "appStartTime" => self::get("appStartTime"),
             "version" => VERSION,
             "baseUrl" => self::get("baseUrl"),
 			"min_port" => self::get("min_port"),
@@ -46,7 +47,9 @@ class Config
 			"admin_contact1" => self::get("admin_contact1"),
 			"admin_contact2" => self::get("admin_contact2"),
 			"admin_contact3" => self::get("admin_contact3"),
-			"enable_flag" => self::get("enable_flag")
+			"register_mode" => self::get("register_mode"),
+            "enable_flag" => self::get("enable_flag"),
+            "enable_kill" => self::get("enable_kill")
          ];
     }
 

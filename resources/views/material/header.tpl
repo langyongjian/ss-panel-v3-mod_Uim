@@ -9,10 +9,12 @@
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
+	<link href="/theme/material/css/auth.css" rel="stylesheet">
 	<link href="https://fonts.loli.net/css?family=Roboto:300,300italic,400,400italic,500,500italic" rel="stylesheet">
-	<link href="https://fonts.loli.net/css?family=Material+Icons">
+	<link href="https://fonts.loli.net/css?family=Material+Icons" rel="stylesheet">
 
 	<!-- favicon -->
+
 	<!-- ... -->
 </head>
   <style>
@@ -86,11 +88,6 @@
 				     <a  href="/password/reset"><i class="icon icon-lg">security</i>&nbsp;重置密码</a>
 					</li>
 
-                  <li>
-                    <div class="divcss5">
-    					<img  src="/images/Ambassador-menu.png" width="230" height="300"/>
-                      </div>
-					</li>
 					{/if}
 				</ul>
 			</div>
